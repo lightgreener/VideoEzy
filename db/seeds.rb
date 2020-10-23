@@ -1,8 +1,8 @@
 
 User.destroy_all
-u1 = User.create :email => 'max@ga.co'
-u2 = User.create :email => 'john@ga.co'
-u3 = User.create :email => 'bindo@ga.co'
+u1 = User.create :email => 'max@ga.co', :password => 'chicken'
+u2 = User.create :email => 'john@ga.co', :password => 'chicken'
+u3 = User.create :email => 'bindo@ga.co',:password => 'chicken'
 puts "#{ User.count } users"
 
 Director.destroy_all
