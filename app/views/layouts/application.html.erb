@@ -7,9 +7,56 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
   <body>
-    <%= yield %>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-navbar bg">
+    <img class="logoImg" src="/assets/video.png" alt="">
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Stores
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">NSW</a>
+              <a class="dropdown-item" href="#"> QLD</a>
+              <a class="dropdown-item" href="#">WA</a>
+              <a class="dropdown-item" href="#">VIC</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">more info</a>
+            </div>
+          </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Movies
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Actions</a>
+            <a class="dropdown-item" href="#">Romance</a>
+            <a class="dropdown-item" href="#">Sci-fic</a>
+            <a class="dropdown-item" href="#">Animation</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">find our stores</a>
+          </div>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+      <div class="container">
+          <%= yield %>
+      </div>
   </body>
 </html>
