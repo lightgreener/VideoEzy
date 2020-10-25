@@ -1,0 +1,7 @@
+<h1>Mylists</h1>
+
+<%= form_for @mylist do |f| %>
+<%= f.label :title %>
+<%=  f.text_field :title, :placeholder =>'make a name '  %>
+<%= f.submit  %>
+<% end %>

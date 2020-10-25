@@ -3,3 +3,8 @@
 <h1>Welcom to VideoEzy</h1>
 
 <h2> Sorry this site is permannently closed </h2>
+
+<% if @current_user.present? %>
+<p> you are login as <%= User.find(session[:user_id]).email %></p>
+<p> you are login as <%= @current_user.email %></p>
+<% end   %>

@@ -29,3 +29,5 @@ m7 = Movie.create(:title => 'Cars', :year => '2006', :length => 117)
 m8 = Movie.create(:title => 'WALL-E', :year => '2008', :length => 104)
 m9 = Movie.create(:title => 'Up', :year => '2009', :length => 101)
 puts "#{ Movie.count} movies"
+
+# 
