@@ -1,4 +1,5 @@
 class SessionController < ApplicationController
+    before_action :check_for_admin, :only => [:index]
   def new
   end
 
@@ -8,6 +9,10 @@ class SessionController < ApplicationController
       user = User.find_by :email => params[:email]
       # find a user
       # if exists and the bcrypt(params[:password]) == password_digest
+
+      # if check_for_admin
+      #     redirect_to root_path
+
       if user.present? && user.authenticate(params[:password])
       # save the user in the session
       session[:user_id] = user.id
@@ -17,7 +22,7 @@ class SessionController < ApplicationController
           flash[:error] = "Invalid username or password"
           redirect_to login_path #display error message
       end
-  end
+    end
 
     def destroy
         session[:user_id] = nil

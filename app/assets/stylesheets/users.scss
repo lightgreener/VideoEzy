@@ -6,7 +6,13 @@
 body {
     max-width: 960px;
     margin: 0 auto;
-    text-align: center;
+}
+
+.row img {
+    padding: 5px;
+    height: 480px;
+    width: 320px;
+    box-shadow: 3px 3px 3px 3px gray;
 }
 
 .bg {

@@ -18,6 +18,7 @@
                <% if @current_user.admin? %>
                <%= link_to 'All users', users_path %>
                <% end %>
+
             <%= link_to " Log out", login_path, :method =>'delete' %>
             <% else %>
             <%= link_to 'Sign up',new_user_path %>
@@ -28,7 +29,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light bg-navbar bg">
 
-    <img class="logoImg" src="/assets/video.png" alt="">
+    <img class="logoImg" src="assets/video.png" alt="">
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -42,7 +43,7 @@
               <a class="dropdown-item" href="#">WA</a>
               <a class="dropdown-item" href="#">VIC</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">more info</a>
+              <a class="dropdown-item" href="#">more stores</a>
             </div>
           </li>
 
@@ -56,7 +57,7 @@
             <a class="dropdown-item" href="#">Sci-fic</a>
             <a class="dropdown-item" href="#">Animation</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">find our stores</a>
+            <a class="dropdown-item" href="#">more movies</a>
           </div>
         </li>
 
@@ -68,11 +69,11 @@
     </div>
   </nav>
 
-      <div class="container">
+      <div class="box">
           <nav class="main-nav">
-          <% if @current_user.present? %>
+              <% if @current_user.present? %>
               Welcome <%= @current_user.email %>
-              <%end  %>
+              <% end  %>
           </nav>
           <%= yield %>
       </div>
