@@ -11,7 +11,7 @@ class SessionController < ApplicationController
       if user.present? && user.authenticate(params[:password])
       # save the user in the session
       session[:user_id] = user.id
-      redirect_to root_path
+      redirect_to new_mylist_path
       #
       else
           flash[:error] = "Invalid username or password"

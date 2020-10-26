@@ -5,15 +5,14 @@ class UsersController < ApplicationController
         @user = User.all
     end
 
-
-  def new
+    def new
       @user = User.new    # UsersHelper give a templete
-  end
+    end
 
 #  fat model
 #  thin controller
 
-  def create
+    def create
       # create users
       #  redirect
       #  set a user object
@@ -26,13 +25,13 @@ class UsersController < ApplicationController
       # else
        else
       # render the new form again
-        render :new
+        redirect_to login_path
        end
-      end
+     end
 
-       private
-       def user_params
+     private
+     def user_params
             params.require(:user).permit(:email, :password, :password_confirmation)
-       end
+     end
 
 end
